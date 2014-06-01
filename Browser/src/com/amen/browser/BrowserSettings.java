@@ -250,7 +250,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         settings.setGeolocationEnabled(enableGeolocation());
         settings.setJavaScriptEnabled(enableJavascript());
         settings.setLightTouchEnabled(enableLightTouch());
-        settings.setNavDump(enableNavDump());
+//        settings.setNavDump(enableNavDump());
         settings.setDefaultTextEncodingName(getDefaultTextEncoding());
         settings.setDefaultZoom(getDefaultZoom());
         settings.setMinimumFontSize(getMinimumFontSize());
@@ -407,7 +407,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public boolean isDebugEnabled() {
         requireInitialization();
-        return mPrefs.getBoolean(PREF_DEBUG_MENU, false);
+        return mPrefs.getBoolean(PREF_DEBUG_MENU, true);
     }
 
     public void setDebugEnabled(boolean value) {
@@ -774,7 +774,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     // -----------------------------
 
     public boolean useQuickControls() {
-        return mPrefs.getBoolean(PREF_ENABLE_QUICK_CONTROLS, false);
+        return mPrefs.getBoolean(PREF_ENABLE_QUICK_CONTROLS, true);
     }
 
     public boolean useMostVisitedHomepage() {

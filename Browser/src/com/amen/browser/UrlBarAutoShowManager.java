@@ -123,13 +123,20 @@ public class UrlBarAutoShowManager implements OnTouchListener,
                 if (ady > mSlop) {
                     mHasTriggered = true;
                     float angle = (float) Math.atan2(ady, adx);
+//                    if (dy > mSlop && angle > V_TRIGGER_ANGLE
+//                            && !mUi.isTitleBarShowing()
+//                            && (web.getVisibleTitleHeight() == 0
+//                            || (!mIsScrolling && web.getScrollY() > 0))) {
+//                        mTriggeredTime = SystemClock.uptimeMillis();
+//                        mUi.showTitleBar();
+//                    }
                     if (dy > mSlop && angle > V_TRIGGER_ANGLE
-                            && !mUi.isTitleBarShowing()
-                            && (web.getVisibleTitleHeight() == 0
-                            || (!mIsScrolling && web.getScrollY() > 0))) {
-                        mTriggeredTime = SystemClock.uptimeMillis();
-                        mUi.showTitleBar();
-                    }
+                        && !mUi.isTitleBarShowing()
+                        && (web.getMeasuredHeight() - web.getContentHeight() == 0
+                        || (!mIsScrolling && web.getScrollY() > 0))) {
+                    mTriggeredTime = SystemClock.uptimeMillis();
+                    mUi.showTitleBar();
+                }
                 }
             }
             break;

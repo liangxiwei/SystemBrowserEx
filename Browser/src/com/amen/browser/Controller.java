@@ -636,7 +636,7 @@ public class Controller
         mUi.onPause();
         mNetworkHandler.onPause();
 
-        WebView.disablePlatformNotifications();
+//        WebView.disablePlatformNotifications();
         NfcHandler.unregister(mActivity);
         if (sThumbnailBitmap != null) {
             sThumbnailBitmap.recycle();
@@ -686,7 +686,7 @@ public class Controller
 
         mUi.onResume();
         mNetworkHandler.onResume();
-        WebView.enablePlatformNotifications();
+//        WebView.enablePlatformNotifications();
         NfcHandler.register(mActivity, this);
         if (mVoiceResult != null) {
             mUi.onVoiceResult(mVoiceResult);
@@ -1665,7 +1665,7 @@ public class Controller
                 break;
 
             case R.id.dump_nav_menu_id:
-                getCurrentTopWebView().debugDump();
+//                getCurrentTopWebView().debugDump();
                 break;
 
             case R.id.zoom_in_menu_id:

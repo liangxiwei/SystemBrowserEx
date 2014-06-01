@@ -387,7 +387,8 @@ public class PhoneUi extends BaseUi {
         mNavScreen.mScroller.finishScroller();
         ImageView target = tabview.mImage;
         int toLeft = 0;
-        int toTop = (tab.getWebView() != null) ? tab.getWebView().getVisibleTitleHeight() : 0;
+//        int toTop = (tab.getWebView() != null) ? tab.getWebView().getVisibleTitleHeight() : 0;
+        int toTop = (tab.getWebView() != null) ? tab.getWebView().getMeasuredHeight()- tab.getWebView().getContentHeight() : 0;
         int toRight = mContentView.getWidth();
         int width = target.getDrawable().getIntrinsicWidth();
         int height = target.getDrawable().getIntrinsicHeight();

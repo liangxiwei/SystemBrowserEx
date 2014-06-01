@@ -245,7 +245,8 @@ public class TitleBar extends RelativeLayout {
     private int getVisibleTitleHeight() {
         Tab tab = mBaseUi.getActiveTab();
         WebView webview = tab != null ? tab.getWebView() : null;
-        return webview != null ? webview.getVisibleTitleHeight() : 0;
+//        return webview != null ? webview.getVisibleTitleHeight() : 0;
+        return webview != null ? webview.getMeasuredHeight() - webview.getContentHeight() : 0;
     }
 
     /**

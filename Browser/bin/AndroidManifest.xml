@@ -21,11 +21,6 @@
 
     <original-package android:name="com.amen.browser" />
 
-    <permission
-        android:name="com.android.browser.permission.PRELOAD"
-        android:label="@string/permission_preload_label"
-        android:protectionLevel="signatureOrSystem" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -51,11 +46,11 @@
 
     <application
         android:name="Browser"
-        android:backupAgent="com.amen.browser.BrowserBackupAgent"
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
         android:label="@string/application_name"
-        android:taskAffinity="android.task.browser" >
+         >
+         <!-- android:taskAffinity="android.task.browser" -->
 <!--         android:supportsRtl="true"-->
         <activity
             android:name="BrowserActivity"
@@ -64,7 +59,7 @@
             android:label="@string/application_name"
             android:launchMode="singleTask"
             android:theme="@style/BrowserTheme"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustPan" >
             <intent-filter>
                 <action android:name="android.speech.action.VOICE_SEARCH_RESULTS" />
 

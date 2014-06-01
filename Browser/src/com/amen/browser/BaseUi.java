@@ -142,9 +142,13 @@ public abstract class BaseUi implements UI {
         mTitleBar.setProgress(100);
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
+        initMenuBar();
     }
+    View mBack,mStop,mFoward,mMenu,mHome;
+    private void initMenuBar() {
+	}
 
-    private void cancelStopToast() {
+	private void cancelStopToast() {
         if (mStopToast != null) {
             mStopToast.cancel();
             mStopToast = null;
@@ -349,7 +353,8 @@ public abstract class BaseUi implements UI {
             if (parent != null) {
                 parent.removeView(mainView);
             }
-            wrapper.addView(mainView);
+            /*wrapper.addView(mainView);*/
+            wrapper.addView(mainView,0);
         }
         parent = (ViewGroup) container.getParent();
         if (parent != mContentView) {

@@ -199,28 +199,28 @@ public class Bookmarks {
      */
     /* package */ static void updateFavicon(final ContentResolver cr,
             final String originalUrl, final String url, final Bitmap favicon) {
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... unused) {
-                final ByteArrayOutputStream os = new ByteArrayOutputStream();
-                favicon.compress(Bitmap.CompressFormat.PNG, 100, os);
-
-                // The Images update will insert if it doesn't exist
-                ContentValues values = new ContentValues();
-                values.put(Images.FAVICON, os.toByteArray());
-                updateImages(cr, originalUrl, values);
-                updateImages(cr, url, values);
-                return null;
-            }
-
-            private void updateImages(final ContentResolver cr,
-                    final String url, ContentValues values) {
-                String iurl = removeQuery(url);
-                if (!TextUtils.isEmpty(iurl)) {
-                    values.put(Images.URL, iurl);
-                    cr.update(BrowserContract.Images.CONTENT_URI, values, null, null);
-                }
-            }
-        }.execute();
+//        new AsyncTask<Void, Void, Void>() {
+//            @Override
+//            protected Void doInBackground(Void... unused) {
+//                final ByteArrayOutputStream os = new ByteArrayOutputStream();
+//                favicon.compress(Bitmap.CompressFormat.PNG, 100, os);
+//
+//                // The Images update will insert if it doesn't exist
+//                ContentValues values = new ContentValues();
+//                values.put(Images.FAVICON, os.toByteArray());
+//                updateImages(cr, originalUrl, values);
+//                updateImages(cr, url, values);
+//                return null;
+//            }
+//
+//            private void updateImages(final ContentResolver cr,
+//                    final String url, ContentValues values) {
+//                String iurl = removeQuery(url);
+//                if (!TextUtils.isEmpty(iurl)) {
+//                    values.put(Images.URL, iurl);
+//                    cr.update(BrowserContract.Images.CONTENT_URI, values, null, null);
+//                }
+//            }
+//        }.execute();
     }
 }

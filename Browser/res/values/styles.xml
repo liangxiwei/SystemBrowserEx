@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="BrowserTheme" parent="@android:Theme.Holo">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:colorBackground">#FFFFFFFF</item>
@@ -92,5 +92,17 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:imeOptions">flagNoExtractUi|actionNext</item>
         <item name="android:singleLine">true</item>
+    </style>
+    <style name="fixall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+     <style name="menubar_style" parent="wrap">
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">3dp</item>
     </style>
 </resources>

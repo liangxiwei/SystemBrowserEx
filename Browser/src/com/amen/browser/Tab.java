@@ -1745,7 +1745,8 @@ class Tab implements PictureListener {
         }
         Canvas c = new Canvas(mCapture);
         final int left = mMainView.getScrollX();
-        final int top = mMainView.getScrollY() + mMainView.getVisibleTitleHeight();
+//        final int top = mMainView.getScrollY() + mMainView.getVisibleTitleHeight();
+        final int top = mMainView.getScrollY() + mMainView.getMeasuredHeight() - mMainView.getContentHeight();
         int state = c.save();
         c.translate(-left, -top);
         float scale = mCaptureWidth / (float) mMainView.getWidth();
