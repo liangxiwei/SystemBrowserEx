@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="1dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menubar_bg"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/toolbar_back"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true"
+        android:src="@drawable/toolbar_back" />
+
+    <ImageView
+        android:id="@+id/toolbar_stop"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true"
+        android:src="@drawable/toolbar_stop"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/toolbar_forward"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true"
+        android:src="@drawable/toolbar_forward" />
+
+    <ImageView
+        android:id="@+id/toolbar_menu"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true"
+        android:src="@drawable/toolbar_menu" />
+
+    <FrameLayout
+        android:id="@+id/toolbar_windows"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/toolbar_windows_img"
+            style="@style/wrap"
+            android:layout_gravity="center"
+            android:src="@drawable/toolbar_windows" />
+
+        <TextView
+            android:id="@+id/tab_num"
+            style="@style/wrap"
+            android:layout_gravity="center"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="12"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/toolbar_home"
+        style="@style/menubar_style"
+        android:layout_weight="1"
+        android:background="@drawable/menubar_item_click"
+        android:clickable="true"
+        android:src="@drawable/toolbar_home" />
+
+</LinearLayout>
