@@ -1,4 +1,4 @@
 # SystemBrowserEx
 SystemBrowserEx
 
-Android System Browser.
+Android System Browser
